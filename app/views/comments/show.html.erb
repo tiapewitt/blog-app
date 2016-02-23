@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @comment.user.email %>
+</p>
+
+<p>
+  <strong>Comment entry:</strong>
+  <%= @comment.comment_entry %>
+</p>
+Posted: <%= time_ago_in_words(comment.created_at) %> ago
+<%= link_to 'Edit', edit_comment_path(@comment) %> |
+<%= link_to 'Back', comments_path %>
